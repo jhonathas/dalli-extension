@@ -1,0 +1,22 @@
+== Dalli Storage Extensions
+
+The dalli-store-extensions plugin for Rails 3 adds support for match-based deletes while using the dalli storage engine.
+
+=== Installation
+
+# Gemfile
+
+  gem 'dalli'
+  gem 'dalli-extensions', :git => "git://github.com/jhonathas/dalli-extensions.git"
+
+# Enviroment config/environments/(development, production, test or others).rb
+
+  config.cache_store = :dalli_store
+
+# Controller Sweepers
+
+  expire_fragment /enter_matcher/
+
+# Model
+
+  Rails.cache.delete_matched(/enter_matcher/)
