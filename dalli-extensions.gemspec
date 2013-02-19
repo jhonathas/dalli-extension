@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name = 'dalli-extensions'
-  s.version = '0.0.1'
+  s.version = '1.0.0'
   s.summary = "Rails Dalli Store extensions providing matched deletion"
   s.description = %{Provides delete_matched for Dalli store in Rails 3}
   s.files = Dir['lib/**/*.rb'] + Dir['spec/**/*.rb']
